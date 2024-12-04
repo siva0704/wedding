@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Wedding Planner website || Web Addicted </title>
+    <title>Wedding Planner website || Web Addicted</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -14,13 +13,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <!-- header section starts -->
-
 <header class="header">
-
     <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <i class="fas fa-user"></i> planner </a>
-
     <nav class="navbar">
        <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
        <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">about</a>
@@ -33,19 +29,22 @@
         <div data-aos="zoom-in-left" data-aos-delay="1350" class="fas fa-moon" id="theme-btn"></div>
         <div data-aos="zoom-in-left" data-aos-delay="1500" class="fas fa-bars" id="menu"></div>
     </div>
-
 </header>
 
-<!-- home -->
-
+<!-- home section starts -->
 <section class="home" id="home">
-
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/VID-20241204-WA0008.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+<!-- 
     <div class="content" data-aos="fade-down">
         <h3>your dream wedding <br> as simple as pie</h3>
         <a href="#" class="btn"> see more info</a>
-    </div>
- 
- </section>
+    </div> -->
+</section>
 
 <!-- end -->
 
@@ -204,7 +203,7 @@
 <!-- end -->
 
 <!-- Add this section where you want the video player -->
-<section class="video-section" id="video-section">
+<!-- <section class="video-section" id="video-section">
     <h1 class="heading">Wedding Highlights</h1>
     <div class="video-container" data-aos="fade-up">
         <video id="weddingVideo" width="600" controls>
@@ -213,7 +212,7 @@
         </video>
         <button id="playButton" class="btn">Play Video</button>
     </div>
-</section>
+</section> -->
 
 <!-- Add this script at the end of the body -->
 <script>

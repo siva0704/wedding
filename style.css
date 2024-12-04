@@ -179,7 +179,7 @@ section{
 
 /* home */
 
-.home{
+/* .home{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -187,7 +187,153 @@ section{
     background:url(images/home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+} */
+
+
+
+
+
+
+
+
+
+/* Base styles for the home section */
+.home {
+   position: relative;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden; /* Hide overflow content caused by the video */
 }
+
+/* Video container to maintain the aspect ratio */
+.video-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding-bottom: 56.25%; /* 16:9 Aspect Ratio (this works for 16:9 videos) */
+   background-color: black;
+   z-index: -1; /* Keeps the video behind the content */
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Video element styling */
+#background-video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Ensures the video keeps its aspect ratio */
+   object-position: center; /* Centers the video in the container */
+}
+
+/* Content styling */
+.content {
+   position: relative; /* Keep the content above the video */
+   z-index: 1; /* Make sure the content is above the video */
+   text-align: center;
+   color: white;
+   padding: 20px;
+}
+
+/* Heading styling */
+h3 {
+   font-size: 2.5em;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn {
+   background-color: #f1c40f;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 5px;
+   text-decoration: none;
+}
+
+
+
+
+/* Media Queries for Video Responsiveness */
+
+/* For tablets and smaller screens (below 1024px) */
+@media (max-width: 1024px) {
+   .video-container {
+       /* Adjust the aspect ratio for tablet and smaller devices */
+       padding-bottom: 56.25%; /* Keep 16:9 for general use */
+   }
+}
+
+/* For smaller tablets and mobile screens (below 768px) */
+@media (max-width: 768px) {
+   .video-container {
+       /* If video becomes too large on smaller tablets, adjust the ratio */
+       padding-bottom: 56.25%; /* Keeps the 16:9 aspect ratio */
+   }
+
+   #background-video {
+       object-fit: cover; /* Maintains the cover fit for video */
+   }
+}
+
+/* For small mobile devices (below 480px) */
+@media (max-width: 480px) {
+   .video-container {
+       /* For mobile, you may want to adjust padding-bottom slightly or keep it as is */
+       padding-bottom: 56.25%; /* 16:9 Aspect Ratio still works well here */
+   }
+
+   #background-video {
+       object-fit: cover; /* Ensures the video is still responsive */
+   }
+}
+
+/* Optionally, you can hide the video on very small screens (below 320px) */
+@media (max-width: 320px) {
+   .video-container {
+       display: none; /* Hide video on extremely small screens */
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .home .content{
   text-align: center;

@@ -41,8 +41,8 @@ html::-webkit-scrollbar-thumb{
 
 body{
    background: var(--bg); 
+   
 }
-
 body.active{
   --primary-color:#fff;
   --light-black:#eee;
@@ -52,7 +52,8 @@ body.active{
 }
 
 section{
-   padding: 3rem 9%;
+   /* padding: 3rem 9%; */
+   padding-right: 0%;
 }
 
 .heading{
@@ -289,6 +290,7 @@ h3 {
    .video-container {
        /* For mobile, you may want to adjust padding-bottom slightly or keep it as is */
        padding-bottom: 56.25%; /* 16:9 Aspect Ratio still works well here */
+
    }
 
    #background-video {
@@ -304,6 +306,37 @@ h3 {
 }
 
 
+.countdown {
+   text-align: center;
+   padding: 50px 0;
+   background-color: #f4f4f9;
+}
+
+#timer {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+
+.time-box {
+   text-align: center;
+   padding: 20px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-box h2 {
+   font-size: 48px;
+   margin: 0;
+   color: #333;
+}
+
+.time-box p {
+   font-size: 18px;
+   margin: 0;
+   color: #666;
+}
 
 
 

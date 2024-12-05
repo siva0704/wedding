@@ -16,11 +16,10 @@
 
     <!-- header section starts -->
 <header class="header">
-    <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <i class="fas fa-user"></i> planner </a>
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <i class="fas fa-user"></i> Wedding </a>
     <nav class="navbar">
        <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
        <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">about</a>
-       <a data-aos="zoom-in-left" data-aos-delay="600" href="#services">service</a>
        <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">gallery</a>
        <a data-aos="zoom-in-left" data-aos-delay="1050" href="#review">Invite</a>
     </nav>
@@ -35,7 +34,7 @@
 <section class="home" id="home">
     <div class="video-container">
         <video autoplay muted loop id="background-video">
-            <source src="./images/VID-20241204-WA0008.mp4" type="video/mp4">
+            <source src="./images//Video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -69,38 +68,54 @@
  </section>
 
  <!-- end -->
-
- <!-- service -->
-
- <section class="services" id="services">
-
-    <h1 class="heading">our services</h1>
- 
-    <div class="box-container">
- 
-        <div class="box" data-aos="zoom-in" data-aos-delay="150">
-          <img src="images/service1.png" alt="">
-          <h3>full video and camera service</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, non?</p>
+ <section class="countdown" id="countdown">
+    <h1 class="heading">Countdown to Wedding</h1>
+    <div id="timer">
+        <div class="time-box">
+            <h2 id="days">00</h2>
+            <p>Days</p>
         </div>
- 
-       <div class="box" data-aos="zoom-in" data-aos-delay="300">
-          <img src="images/service2.png" alt="">
-          <h3>we arrange flowers and decorations</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, non?</p>
-       </div>
- 
-       <div class="box" data-aos="zoom-in" data-aos-delay="450">
-          <img src="images/service3.png" alt="">
-          <h3>finding the right place for you</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, minima?</p>
-       </div>
- 
+        <div class="time-box">
+            <h2 id="hours">00</h2>
+            <p>Hours</p>
+        </div>
+        <div class="time-box">
+            <h2 id="minutes">00</h2>
+            <p>Minutes</p>
+        </div>
+        <div class="time-box">
+            <h2 id="seconds">00</h2>
+            <p>Seconds</p>
+        </div>
     </div>
- 
- </section>
- 
-<!-- service end-->
+</section>
+<script>
+    const targetDate = new Date("December 12, 2024 00:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeDifference = targetDate - now;
+
+        if (timeDifference <= 0) {
+            document.getElementById("timer").innerHTML = "<h2>The big day has arrived! 🎉</h2>";
+            clearInterval(countdownInterval);
+            return;
+        }
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
 
     <!-- gallery=--->
 
@@ -154,7 +169,17 @@
 
             <div class="swiper-slide slide">
                 <img src="images/pic-4.png" alt="">
-                <h3>Shilshree</h3>
+                <h3>Shailshree</h3>
+                <p>Hi All, it gives me immense pleasure to cordially Invite you and your family on the auspicious occasion of my brother's marriage. Please treat this as my personal invitation and join us to Make our golden moments precious by your  charming presence.</p>
+            </div>
+            <div class="swiper-slide slide">
+                <img src="images/pic-9.png" alt="">
+                <h3>Chetan</h3>
+                <p>Hi All, it gives me immense pleasure to cordially Invite you and your family on the auspicious occasion of my brother's marriage. Please treat this as my personal invitation and join us to Make our golden moments precious by your  charming presence.</p>
+            </div>
+            <div class="swiper-slide slide">
+                <img src="images/pic-10.png" alt="">
+                <h3>Priyank</h3>
                 <p>Hi All, it gives me immense pleasure to cordially Invite you and your family on the auspicious occasion of my brother's marriage. Please treat this as my personal invitation and join us to Make our golden moments precious by your  charming presence.</p>
             </div>
 
@@ -178,12 +203,12 @@
  
        <div class="box">
           <img src="images/pic-5.png" alt="">
-          <h3>Durva</h3>
+          <h3>Dhruva</h3>
        </div>
  
        <div class="box">
           <img src="images/pic-6.png" alt="">
-          <h3>Durthi</h3>
+          <h3>Dhruthi</h3>
        </div>
  
        <div class="box">
